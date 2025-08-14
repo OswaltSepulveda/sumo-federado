@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-08-14 10:45:58.563553 by randomTrips.py v1_24_0+0000-b72eb3fabc8
+<configuration>
+    <net-file value="sumo/scenarios/grid_2x2/net.net.xml"/>
+    <route-file value="sumo/scenarios/grid_2x2/routes.rou.xml"/>
+    <trip-attributes value="departLane=&quot;best&quot; departSpeed=&quot;max&quot;"/>
+    <seed value="103"/>
+    <end value="480.0"/>
+    <period value="3.5"/>
+</configuration>
+-->
+
+<!-- generated on 2025-08-14 10:45:58 by Eclipse SUMO duarouter Version 1.24.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="sumo/scenarios/grid_2x2/net.net.xml"/>
+        <route-files value="trips.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="sumo/scenarios/grid_2x2/routes.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="0.0"/>
+        <end value="480.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="0" depart="0.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="1" depart="3.50" departLane="best" departSpeed="max">
+        <route edges="B0B1"/>
+    </vehicle>
+    <vehicle id="2" depart="7.00" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="3" depart="10.50" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="4" depart="14.00" departLane="best" departSpeed="max">
+        <route edges="B0B1"/>
+    </vehicle>
+    <vehicle id="5" depart="17.50" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="6" depart="21.00" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="7" depart="24.50" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="8" depart="28.00" departLane="best" departSpeed="max">
+        <route edges="A1A0"/>
+    </vehicle>
+    <vehicle id="9" depart="31.50" departLane="best" departSpeed="max">
+        <route edges="B1B0"/>
+    </vehicle>
+    <vehicle id="10" depart="35.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="11" depart="38.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="12" depart="42.00" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="13" depart="45.50" departLane="best" departSpeed="max">
+        <route edges="B1B0"/>
+    </vehicle>
+    <vehicle id="14" depart="49.00" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="15" depart="52.50" departLane="best" departSpeed="max">
+        <route edges="B0A0"/>
+    </vehicle>
+    <vehicle id="16" depart="56.00" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="17" depart="59.50" departLane="best" departSpeed="max">
+        <route edges="B0A0"/>
+    </vehicle>
+    <vehicle id="18" depart="63.00" departLane="best" departSpeed="max">
+        <route edges="A1B1"/>
+    </vehicle>
+    <vehicle id="19" depart="66.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="20" depart="70.00" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1"/>
+    </vehicle>
+    <vehicle id="21" depart="73.50" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="22" depart="77.00" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="23" depart="80.50" departLane="best" departSpeed="max">
+        <route edges="A1A0"/>
+    </vehicle>
+    <vehicle id="24" depart="84.00" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="25" depart="87.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="26" depart="91.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="27" depart="94.50" departLane="best" departSpeed="max">
+        <route edges="B0B1"/>
+    </vehicle>
+    <vehicle id="28" depart="98.00" departLane="best" departSpeed="max">
+        <route edges="A1A0"/>
+    </vehicle>
+    <vehicle id="29" depart="101.50" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="30" depart="105.00" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1 B1A1"/>
+    </vehicle>
+    <vehicle id="31" depart="108.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="32" depart="112.00" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="33" depart="115.50" departLane="best" departSpeed="max">
+        <route edges="A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="34" depart="119.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="35" depart="122.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="36" depart="126.00" departLane="best" departSpeed="max">
+        <route edges="A0A1"/>
+    </vehicle>
+    <vehicle id="37" depart="129.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="38" depart="133.00" departLane="best" departSpeed="max">
+        <route edges="B1A1"/>
+    </vehicle>
+    <vehicle id="39" depart="136.50" departLane="best" departSpeed="max">
+        <route edges="B1A1"/>
+    </vehicle>
+    <vehicle id="40" depart="140.00" departLane="best" departSpeed="max">
+        <route edges="A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="41" depart="143.50" departLane="best" departSpeed="max">
+        <route edges="B1A1"/>
+    </vehicle>
+    <vehicle id="42" depart="147.00" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="43" depart="150.50" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="44" depart="154.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="45" depart="157.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="46" depart="161.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="47" depart="164.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="48" depart="168.00" departLane="best" departSpeed="max">
+        <route edges="A1A0"/>
+    </vehicle>
+    <vehicle id="49" depart="171.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="50" depart="175.00" departLane="best" departSpeed="max">
+        <route edges="A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="51" depart="178.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="52" depart="182.00" departLane="best" departSpeed="max">
+        <route edges="B0B1"/>
+    </vehicle>
+    <vehicle id="53" depart="185.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="54" depart="189.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="55" depart="192.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="56" depart="196.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="57" depart="199.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="58" depart="203.00" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="59" depart="206.50" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1 B1A1"/>
+    </vehicle>
+    <vehicle id="60" depart="210.00" departLane="best" departSpeed="max">
+        <route edges="A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="61" depart="213.50" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="62" depart="217.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="63" depart="220.50" departLane="best" departSpeed="max">
+        <route edges="A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="64" depart="224.00" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="65" depart="227.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="66" depart="231.00" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="67" depart="234.50" departLane="best" departSpeed="max">
+        <route edges="A0A1"/>
+    </vehicle>
+    <vehicle id="68" depart="238.00" departLane="best" departSpeed="max">
+        <route edges="A0B0"/>
+    </vehicle>
+    <vehicle id="69" depart="241.50" departLane="best" departSpeed="max">
+        <route edges="A1A0"/>
+    </vehicle>
+    <vehicle id="70" depart="245.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="71" depart="248.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="72" depart="252.00" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="73" depart="255.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="74" depart="259.00" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1 B1A1"/>
+    </vehicle>
+    <vehicle id="75" depart="262.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="76" depart="266.00" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="77" depart="269.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="78" depart="273.00" departLane="best" departSpeed="max">
+        <route edges="A1B1"/>
+    </vehicle>
+    <vehicle id="79" depart="276.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="80" depart="280.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="81" depart="283.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="82" depart="287.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="83" depart="290.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="84" depart="294.00" departLane="best" departSpeed="max">
+        <route edges="B0B1"/>
+    </vehicle>
+    <vehicle id="85" depart="297.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1"/>
+    </vehicle>
+    <vehicle id="86" depart="301.00" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="87" depart="304.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="88" depart="308.00" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="89" depart="311.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="90" depart="315.00" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1"/>
+    </vehicle>
+    <vehicle id="91" depart="318.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="92" depart="322.00" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="93" depart="325.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="94" depart="329.00" departLane="best" departSpeed="max">
+        <route edges="A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="95" depart="332.50" departLane="best" departSpeed="max">
+        <route edges="B0A0"/>
+    </vehicle>
+    <vehicle id="96" depart="336.00" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1"/>
+    </vehicle>
+    <vehicle id="97" depart="339.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="98" depart="343.00" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="99" depart="346.50" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="100" depart="350.00" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="101" depart="353.50" departLane="best" departSpeed="max">
+        <route edges="B1A1"/>
+    </vehicle>
+    <vehicle id="102" depart="357.00" departLane="best" departSpeed="max">
+        <route edges="B0A0"/>
+    </vehicle>
+    <vehicle id="103" depart="360.50" departLane="best" departSpeed="max">
+        <route edges="B0A0"/>
+    </vehicle>
+    <vehicle id="104" depart="364.00" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="105" depart="367.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="106" depart="371.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="107" depart="374.50" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="108" depart="378.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="109" depart="381.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="110" depart="385.00" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="111" depart="388.50" departLane="best" departSpeed="max">
+        <route edges="B0A0"/>
+    </vehicle>
+    <vehicle id="112" depart="392.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="113" depart="395.50" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="114" depart="399.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="115" depart="402.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="116" depart="406.00" departLane="best" departSpeed="max">
+        <route edges="B1B0"/>
+    </vehicle>
+    <vehicle id="117" depart="409.50" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="118" depart="413.00" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="119" depart="416.50" departLane="best" departSpeed="max">
+        <route edges="A0B0"/>
+    </vehicle>
+    <vehicle id="120" depart="420.00" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="121" depart="423.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0"/>
+    </vehicle>
+    <vehicle id="122" depart="427.00" departLane="best" departSpeed="max">
+        <route edges="A0A1"/>
+    </vehicle>
+    <vehicle id="123" depart="430.50" departLane="best" departSpeed="max">
+        <route edges="A0A1 A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="124" depart="434.00" departLane="best" departSpeed="max">
+        <route edges="A0B0 B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="125" depart="437.50" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="126" depart="441.00" departLane="best" departSpeed="max">
+        <route edges="B1A1 A1A0 A0B0 B0B1"/>
+    </vehicle>
+    <vehicle id="127" depart="444.50" departLane="best" departSpeed="max">
+        <route edges="B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="128" depart="448.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="129" depart="451.50" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0"/>
+    </vehicle>
+    <vehicle id="130" depart="455.00" departLane="best" departSpeed="max">
+        <route edges="B1B0 B0A0 A0A1 A1B1"/>
+    </vehicle>
+    <vehicle id="131" depart="458.50" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0 B0A0 A0A1"/>
+    </vehicle>
+    <vehicle id="132" depart="462.00" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="133" depart="465.50" departLane="best" departSpeed="max">
+        <route edges="B0B1 B1A1 A1A0"/>
+    </vehicle>
+    <vehicle id="134" depart="469.00" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="135" depart="472.50" departLane="best" departSpeed="max">
+        <route edges="A1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="136" depart="476.00" departLane="best" departSpeed="max">
+        <route edges="B0B1"/>
+    </vehicle>
+    <vehicle id="137" depart="479.50" departLane="best" departSpeed="max">
+        <route edges="A1A0 A0B0 B0B1"/>
+    </vehicle>
+</routes>

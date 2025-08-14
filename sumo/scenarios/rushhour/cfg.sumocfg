@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <input>
-    <net-file value="C:/Users/melio/OneDrive/Escritorio/Proyectos/semaforos-geneticos/sumo/scenarios/rushhour/net.net.xml"/>
-    <route-files value="C:/Users/melio/OneDrive/Escritorio/Proyectos/semaforos-geneticos/sumo/scenarios/rushhour/routes_morning.rou.xml,C:/Users/melio/OneDrive/Escritorio/Proyectos/semaforos-geneticos/sumo/scenarios/rushhour/routes_offpeak.rou.xml,C:/Users/melio/OneDrive/Escritorio/Proyectos/semaforos-geneticos/sumo/scenarios/rushhour/routes_evening.rou.xml"/>
-  </input>
-  <time begin="0" end="2700" step-length="1"/>
-</configuration>

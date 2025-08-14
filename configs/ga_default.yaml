@@ -1,8 +1,32 @@
-# Hiperparámetros por defecto del GA
-population_size: 30
-generations: 40
-selection: "tournament"
-tournament_k: 3
-crossover_rate: 0.9
-mutation_rate: 0.1
+seed: 42
+population_size: 24
+generations: 20
 elitism: 2
+
+selection:
+  type: "tournament"   # "tournament" | "roulette" | "rank"
+  tournament_k: 3
+
+crossover:
+  rate: 0.9
+  type: "per_intersection"  # "per_intersection" | "intra_intersection"
+  # si "intra_intersection": fracción de fases intercambiadas
+  intra_swap_frac: 0.5
+
+mutation:
+  rate: 0.2
+  time_jitter_s: 2         # +/- segundos a green/yellow/red
+  offset_jitter_s: 4       # +/- segundos a offset
+  reorder_prob: 0.1        # prob de reordenar fases dentro del TLS
+  clamp: true              # mantener en rangos válidos
+
+fitness:
+  steps: 1200
+  weights:                 # maximizar fitness -> por eso flujo positivo, costos negativos
+    jam_time_w: -1.0       # tiempo en tapón (sumatoria por step)
+    wait_time_w: -0.7      # tiempo de espera total
+    road_rage_w: -0.4      # métrica compuesta (p.ej. stops^2 o colas^2)
+    flow_w:  1.0           # throughput veh completados
+  penalties:
+    invalid_tls_w: -2.0    # violaciones a compatibilidad o “una sola vía activa”
+    cycle_out_of_bounds_w: -1.0

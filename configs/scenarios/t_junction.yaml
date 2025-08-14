@@ -1,0 +1,62 @@
+tls_defaults:
+  green: 12
+  yellow: 3
+  red: 1
+  offset: 0
+  min_green: 5
+  max_green: 60
+  min_yellow: 2
+  max_yellow: 5
+  min_red: 0
+  max_red: 10
+  min_cycle: 20
+  max_cycle: 240
+
+tls:
+  # Nodo central B1: NS juntos, rama A1 separada
+  B1:
+    offset: 4
+    compatibility_groups:
+      - ["B2B1", "B3B1"]  # eje principal N<->S
+      - ["A1B1"]          # rama
+    phases:
+      - active_approaches: ["B2B1", "B3B1"]
+        g: 14
+        y: 3
+        r: 2
+      - active_approaches: ["A1B1"]
+        g: 10
+        y: 3
+        r: 2
+
+  # Nodo B2: opuestos B1B2 & B3B2 vs rama A1B2
+  B2:
+    offset: 2
+    compatibility_groups:
+      - ["B1B2", "B3B2"]
+      - ["A1B2"]
+    phases:
+      - active_approaches: ["B1B2", "B3B2"]
+        g: 12
+        y: 3
+        r: 1
+      - active_approaches: ["A1B2"]
+        g: 8
+        y: 3
+        r: 1
+
+  # Nodo B3: opuestos B1B3 & B2B3 vs rama A1B3
+  B3:
+    offset: 6
+    compatibility_groups:
+      - ["B1B3", "B2B3"]
+      - ["A1B3"]
+    phases:
+      - active_approaches: ["B1B3", "B2B3"]
+        g: 12
+        y: 3
+        r: 1
+      - active_approaches: ["A1B3"]
+        g: 8
+        y: 3
+        r: 1

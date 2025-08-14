@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <input>
-    <net-file value="C:/Users/melio/OneDrive/Escritorio/Proyectos/semaforos-geneticos/sumo/scenarios/arterial/net.net.xml"/>
-    <route-files value="C:/Users/melio/OneDrive/Escritorio/Proyectos/semaforos-geneticos/sumo/scenarios/arterial/routes.rou.xml"/>
+    <net-file value="C:/Users/Ismael Reyes/Documents/sumo-federado/sumo/scenarios/arterial/net.net.xml"/>
+    <route-files value="C:/Users/Ismael Reyes/Documents/sumo-federado/sumo/scenarios/arterial/routes.rou.xml"/>
   </input>
   <time begin="0" end="900" step-length="1"/>
 </configuration>
