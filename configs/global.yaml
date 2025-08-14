@@ -1,0 +1,4 @@
+# Configuración global
+random_seed: 42
+log_level: INFO
+output_dir: experiments/results

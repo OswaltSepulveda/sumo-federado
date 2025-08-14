@@ -1,0 +1,31 @@
+tls_defaults:
+  green: 12
+  yellow: 3
+  red: 1
+  offset: 0
+  min_green: 5
+  max_green: 60
+  min_yellow: 2
+  max_yellow: 5
+  min_red: 0
+  max_red: 10
+  min_cycle: 20
+  max_cycle: 240
+
+tls:
+  # En la intersección central (B1) permitimos pares opuestos simultáneos
+  B1:
+    offset: 8
+    compatibility_groups:
+      - ["B2B1","B0B1"]    # N<->S
+      - ["C1B1","A1B1"]    # E<->O
+    phases:
+      - active_approaches: ["B2B1","B0B1"]
+        g: 14
+        y: 3
+        r: 2
+      - active_approaches: ["C1B1","A1B1"]
+        g: 14
+        y: 3
+        r: 2
+  # El resto de TLS no listados usa: una vía a la vez con los defaults

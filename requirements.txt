@@ -1,0 +1,6 @@
+# Paquetes de apoyo (SUMO/TraCI se toma de $SUMO_HOME/tools)
+pandas>=2.2
+numpy>=1.26
+PyYAML>=6.0
+matplotlib>=3.7
+tqdm>=4.66

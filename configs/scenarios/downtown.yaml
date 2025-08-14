@@ -1,0 +1,76 @@
+tls_defaults:
+  green: 12
+  yellow: 3
+  red: 2
+  offset: 0
+  min_green: 5
+  max_green: 60
+  min_yellow: 2
+  max_yellow: 5
+  min_red: 0
+  max_red: 10
+  min_cycle: 25
+  max_cycle: 240
+
+tls:
+  # Núcleo central — cuatro cruces con pares opuestos concurrentes
+  C2:
+    offset: 6
+    compatibility_groups:
+      - ["C1C2","C3C2"]   # E–O
+      - ["B2C2","D2C2"]   # N–S
+    phases:
+      - active_approaches: ["C1C2","C3C2"]
+        g: 14
+        y: 3
+        r: 2
+      - active_approaches: ["B2C2","D2C2"]
+        g: 14
+        y: 3
+        r: 2
+
+  C3:
+    offset: 8
+    compatibility_groups:
+      - ["C2C3","C4C3"]
+      - ["B3C3","D3C3"]
+    phases:
+      - active_approaches: ["C2C3","C4C3"]
+        g: 14
+        y: 3
+        r: 2
+      - active_approaches: ["B3C3","D3C3"]
+        g: 14
+        y: 3
+        r: 2
+
+  D2:
+    offset: 10
+    compatibility_groups:
+      - ["D1D2","D3D2"]
+      - ["C2D2","E2D2"]
+    phases:
+      - active_approaches: ["D1D2","D3D2"]
+        g: 14
+        y: 3
+        r: 2
+      - active_approaches: ["C2D2","E2D2"]
+        g: 14
+        y: 3
+        r: 2
+
+  D3:
+    offset: 12
+    compatibility_groups:
+      - ["D2D3","D4D3"]
+      - ["C3D3","E3D3"]
+    phases:
+      - active_approaches: ["D2D3","D4D3"]
+        g: 14
+        y: 3
+        r: 2
+      - active_approaches: ["C3D3","E3D3"]
+        g: 14
+        y: 3
+        r: 2
+  # Otros TLS: fallback con defaults
