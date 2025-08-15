@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-08-13 18:14:57 by Eclipse SUMO netedit Version 1.19.0
+<!-- generated on 2025-08-14 20:11:48 by Eclipse SUMO netedit Version 1.19.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -33,11 +33,11 @@
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <tlLogic id="clusterJ4_J6_J7" type="static" programID="0" offset="0">
-        <phase duration="38" state="GrGGGg"/>
-        <phase duration="3" state="yryyyr"/>
-        <phase duration="6" state="grgrGG"/>
-        <phase duration="3" state="yryryy"/>
-        <phase duration="37" state="GGGrgg"/>
+        <phase duration="38" state="GrGGGr"/>
+        <phase duration="3" state="yryyyg"/>
+        <phase duration="6" state="rrrrGG"/>
+        <phase duration="3" state="rrrryy"/>
+        <phase duration="37" state="GGGrGr"/>
         <phase duration="3" state="yyyryr"/>
     </tlLogic>
 </additional>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-08-14 20:26:57 by Eclipse SUMO netedit Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumocfg-file value="C:\Users\oswal\Desktop\ITLA\IA Distribuida\sumo-federado\arista 2\simulacion_arista2.sumocfg"/>
+        <route-files value="C:\Users\oswal\Desktop\ITLA\IA Distribuida\sumo-federado\arista 2\simulacion_arista2.rou.xml"/>
+        <sumo-net-file value="C:\Users\oswal\Desktop\ITLA\IA Distribuida\sumo-federado\arista 2\simulacion_arista2.net.xml"/>
+    </input>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <netedit>
+        <new-network value="false"/>
+    </netedit>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <tlLogic id="clusterJ3_J4" type="static" programID="0" offset="0">
+        <phase duration="38" state="GgGrGG"/>
+        <phase duration="3" state="ygyryy"/>
+        <phase duration="6" state="GGrrrr"/>
+        <phase duration="3" state="yyrrrr"/>
+        <phase duration="37" state="GrGGGr"/>
+        <phase duration="3" state="yryyyr"/>
+    </tlLogic>
+</additional>
