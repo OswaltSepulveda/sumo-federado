@@ -155,7 +155,7 @@ def evaluate_genome(genome: np.ndarray, gen_num=None, ind_num=None) -> dict:
 
 # Guardado automático en CSV
 def save_results(metrics: dict):
-    filename = "resultados.csv"
+    filename = "resultados_eval_1.csv"
     write_header = not os.path.exists(filename)
     with open(filename, mode="a", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=metrics.keys())
