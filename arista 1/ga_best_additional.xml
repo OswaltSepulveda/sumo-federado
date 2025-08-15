@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd"><tlLogic id="clusterJ4_J6_J7" type="static" programID="GA" offset="0"><phase duration="10" state="GrGGGr" /><phase duration="8" state="yryyyg" /><phase duration="8" state="rrrrGG" /><phase duration="3" state="rrrryy" /><phase duration="8" state="GGGrGr" /><phase duration="3" state="yyyryr" /></tlLogic></additional>
