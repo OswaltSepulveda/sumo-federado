@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <input>
-    <net-file value="C:/Users/Ismael Reyes/Documents/sumo-federado/sumo/scenarios/cross_plus/net.net.xml"/>
-    <route-files value="C:/Users/Ismael Reyes/Documents/sumo-federado/sumo/scenarios/cross_plus/routes.rou.xml"/>
-  </input>
-  <time begin="0" end="360" step-length="1"/>
-</configuration>

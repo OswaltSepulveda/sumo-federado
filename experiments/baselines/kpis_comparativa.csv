@@ -1,3 +1,0 @@
-csv_dir,sim_steps,throughput_veh,avg_travel_time_s,median_travel_time_s,p95_travel_time_s,total_waiting_time,avg_waiting_time_per_veh
-experiments\baselines\grid_3x3\static_fallback\20250813_210812\csv,1199,150,0.209,0.122,0.809,29198172.0,194654.48
-experiments\baselines\grid_3x3\coordinated\20250813_210812\csv,1199,150,0.209,0.122,0.809,29198172.0,194654.48

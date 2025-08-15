@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <input>
-    <net-file value="C:/Users/Ismael Reyes/Documents/sumo-federado/sumo/scenarios/grid_2x2/net.net.xml"/>
-    <route-files value="C:/Users/Ismael Reyes/Documents/sumo-federado/sumo/scenarios/grid_2x2/routes.rou.xml"/>
-  </input>
-  <time begin="0" end="480" step-length="1"/>
-</configuration>
