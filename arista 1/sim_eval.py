@@ -49,16 +49,34 @@ def evaluate_genome(genome, net_file, route_file, scenario, run_id, sumo_binary=
                 # Si no hay definiciones, saltar (no debería pasar)
                 continue
 
-            # Modificamos la primera definición (usualmente la principal)
             try:
-                defs_mod = list(defs)
-                tl_logic = defs_mod[0]
+                # Tomar la primera definición (lógica principal)
+                tl_logic = defs[0]
+
+                # Crear lista de fases modificadas
+                new_phases = []
                 for phase_index, phase in enumerate(tl_logic.phases):
                     dur = int(genome[phase_index % len(genome)])
                     if dur < 1:
                         dur = 1
-                    phase.duration = dur
-                traci.trafficlight.setCompleteRedYellowGreenDefinition(tls, defs_mod)
+                    new_phases.append(traci.trafficlight.Phase(
+                        duration=dur,
+                        state=phase.state,
+                        minDur=phase.minDur,
+                        maxDur=phase.maxDur
+                    ))
+
+                # Crear nuevo objeto TrafficLightLogic
+                new_logic = traci.trafficlight.Logic(
+                    programID=tl_logic.programID,
+                    type=tl_logic.type,
+                    currentPhaseIndex=tl_logic.currentPhaseIndex,
+                    phases=new_phases
+                )
+
+                # Aplicar la nueva definición
+                traci.trafficlight.setCompleteRedYellowGreenDefinition(tls, new_logic)
+
             except Exception as e:
                 print(f"[WARN] No se pudo aplicar definiciones TLS para {tls}: {e}")
 
@@ -98,7 +116,7 @@ def evaluate_genome(genome, net_file, route_file, scenario, run_id, sumo_binary=
                 tls_metrics[tls]["steps"] += 1
 
         # Obtener stats de simulación ANTES de cerrar
-        sim_time_ms = traci.simulation.getCurrentTime()  # ms
+        sim_time_ms = traci.simulation.getTime()  # ms
         total_veh = traci.simulation.getArrivedNumber()
         sim_time = sim_time_ms / 1000.0 if sim_time_ms is not None else (total_steps if total_steps > 0 else 1)
 

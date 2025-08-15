@@ -11,8 +11,8 @@ if __name__ == "__main__":
     parser.add_argument("--pop", type=int, default=30, help="Población GA")
     parser.add_argument("--gen", type=int, default=15, help="Generaciones GA")
     parser.add_argument("--scenario", type=str, default="default", help="Nombre del escenario")
-    parser.add_argument("--net", type=str, default="map.net.xml", help="Archivo .net.xml de la red (NUEVO)")
-    parser.add_argument("--route", type=str, default="routes.rou.xml", help="Archivo .rou.xml de rutas (NUEVO)")
+    parser.add_argument("--net", type=str, default=r"C:\Users\luisc\Downloads\aristas\sumo-federado\arista 1\1_arista_simulation.net.xml", help="Archivo .net.xml de la red (NUEVO)")
+    parser.add_argument("--route", type=str, default=r"C:\Users\luisc\Downloads\aristas\sumo-federado\arista 1\1_arista_simulation.rou.xml", help="Archivo .rou.xml de rutas (NUEVO)")
     parser.add_argument("--gui", action="store_true", help="Usar sumo-gui en lugar de sumo (NUEVO)")
     args = parser.parse_args()
 
