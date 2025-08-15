@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-08-14 20:26:02 by Eclipse SUMO netedit Version 1.19.0
+<!-- generated on 2025-08-14 21:05:00 by Eclipse SUMO netedit Version 1.19.0
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <!-- Vehicles, persons and containers (sorted by depart) -->
-    <flow id="veh1" begin="0.00" color="white" from="-E0.61" to="-E1" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh1" begin="0.00" from="E1" to="-E2" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh10" begin="0.00" color="white" from="E0" to="-E1" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh11" begin="0.00" color="magenta" from="E0" to="-E0" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh12" begin="0.00" color="0,0,128" from="-E0.61" to="-E2" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh13" begin="0.00" color="0,128,128" from="-E0.61" to="-E1" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh14" begin="0.00" from="-E0.61" to="E0.61" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh2" begin="0.00" color="green" from="E1" to="E0.61" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh3" begin="0.00" color="magenta" from="E1" to="-E0" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh4" begin="0.00" color="cyan" from="E1" to="-E1" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh5" begin="0.00" color="128,0,128" from="E2" to="-E1" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh6" begin="0.00" color="green" from="E2" to="E0.61" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh7" begin="0.00" color="128,0,0" from="E2" to="-E0" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh8" begin="0.00" color="128,128,0" from="E2" to="-E2" end="3600.00" vehsPerHour="1800"/>
+    <flow id="veh9" begin="0.00" color="red" from="E0" to="-E2" end="3600.00" vehsPerHour="1800"/>
 </routes>
