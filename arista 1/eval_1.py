@@ -5,7 +5,7 @@ import sys
 import traceback
 import numpy as np  # Para genomas
 import yaml  # Si usas config.yaml; ajusta si no
-from ga_opt import run_ga_opt
+# from ga_opt import run_ga_opt   # <-- removido del tope para evitar import circular
 
 
 # Step 2: Establish path to SUMO (SUMO_HOME) and tools
@@ -59,7 +59,7 @@ except FileNotFoundError:
             "weights": {"travel_time": 1.0, "waiting_time": 2.0, "queue_len": 1.5},
             "road_rage": {"jam_threshold": 10, "penalty_per_step": 5.0}
         },
-        "traffic": {"traffic_lights": traci.trafficlight.getIDList()}  # Obtén dinámicamente
+        "traffic": {"traffic_lights": traci.trafficlight.getIDList(), "phases_per_tls": 4}  # Obtén dinámicamente
     }
 
 # Step 5: Open connection between SUMO and Traci
@@ -108,7 +108,7 @@ def update_speed(tracked_id, total_speed, samples, flow_prefix="veh1"):
             print(f"El vehículo {tracked_id} ya no está en la simulación.")
             tracked_id = None
 
-    return tracked_id, total_speed, samples
+    return tracked_id, total_speed, samples 
 
 def apply_genome_to_tls(genome: np.ndarray, tls_list):
     """
@@ -212,39 +212,46 @@ def optimize_traffic_lights(pop_size=50, generations=100):
     Función para optimizar configuraciones de semáforos usando GA estándar.
     Retorna configs idóneas por semáforo.
     """
+    # Importación local para evitar import circular
+    from ga_opt import run_ga_opt
+
     tls_list = traci.trafficlight.getIDList()  # Obtén una vez (asumiendo simulación no iniciada)
-    best_genome, metrics = run_ga_opt(pop_size=pop_size, generations=generations)
-    
+    # pasamos evaluate_genome y SIMCONF al GA
+    best_genome, metrics = run_ga_opt(pop_size=pop_size, generations=generations,
+                                      eval_fn=evaluate_genome, simconf=SIMCONF)
+
     # Desglosar genoma por semáforo
-    phases_per_tls = 4  # Ajusta
+    phases_per_tls = SIMCONF.get("traffic", {}).get("phases_per_tls", 4)  # Ajusta
     tls_configs = {}
     for i, tls_id in enumerate(tls_list):
         start = i * phases_per_tls
         end = start + phases_per_tls
-        tls_configs[tls_id] = best_genome[start:end].tolist()  # Lista de duraciones
+        # aseguramos que best_genome sea indexable (si es numpy array o lista)
+        tls_configs[tls_id] = best_genome[start:end].tolist() if hasattr(best_genome, "tolist") else list(best_genome[start:end])
     
     return {
         "best_configs": tls_configs,
         "metrics": metrics
     }
 
-# Step 8: Simulation loop (opcional; puedes comentarlo y correr optimización en su lugar)
+# Step 8: Simulation loop 
 # Para correr simulación simple:
-start_sumo()
-try:
-    while traci.simulation.getMinExpectedNumber() > 0:
-        traci.simulationStep()
-        tracked, total_speed, samples = update_speed(tracked, total_speed, samples, flow_prefix="veh1")
-finally:
-    # Step 9: Close connection
-    close_sumo()
-    print("TraCI closed.")
+if __name__ == "__main__":
+    start_sumo()
+    try:
+        while traci.simulation.getMinExpectedNumber() > 0:
+            traci.simulationStep()
+            tracked, total_speed, samples = update_speed(tracked, total_speed, samples, flow_prefix="veh1")
+    finally:
+        # Step 9: Close connection
+        close_sumo()
+        print("TraCI closed.")
 
-# Resultado final (evita división por cero)
-if samples > 0:
-    print(f"Average observed speed for tracked samples: {total_speed/samples:.3f} m/s over {samples} samples")
-else:
-    print("No speed samples were collected.")
+    # Resultado final (evita división por cero)
+    if samples > 0:
+        print(f"Average observed speed for tracked samples: {total_speed/samples:.3f} m/s over {samples} samples")
+    else:
+        print("No speed samples were collected.")
 
 # Para correr optimización (agrega esto al final o en un main)
 # result = optimize_traffic_lights(pop_size=50, generations=100)
