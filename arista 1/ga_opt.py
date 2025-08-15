@@ -6,18 +6,23 @@ import os
 from datetime import datetime
 from deap import base, creator, tools
 
-# Importamos evaluate_genome desde el módulo separado para evitar ciclos
+# Importamos evaluate_genome desde sim_eval
 from sim_eval import evaluate_genome
 
-# NUEVO: Se agregó generación de archivo summary_{scenario}_{run_id}.csv para ver evolución por generación.
-# NUEVO: Se agregó limitación de tiempos de fase después de mutar (10 a 60 segundos).
-
-def run_ga_optimization(pop_size, generations, net_file, route_file, scenario, run_id):
+# NUEVO: run_ga_optimization ahora acepta sumo_binary y lo pasa a evaluate_genome
+def run_ga_optimization(pop_size, generations, net_file, route_file, scenario, run_id, sumo_binary="sumo"):
     random.seed(42)
 
     # Configuración DEAP
-    creator.create("FitnessMax", base.Fitness, weights=(1.0,))
-    creator.create("Individual", list, fitness=creator.FitnessMax)
+    # Evitar re-definir creators si ya existen (útil si corres varias veces en misma sesión)
+    try:
+        creator.create("FitnessMax", base.Fitness, weights=(1.0,))
+    except Exception:
+        pass
+    try:
+        creator.create("Individual", list, fitness=creator.FitnessMax)
+    except Exception:
+        pass
 
     toolbox = base.Toolbox()
     toolbox.register("attr_int", random.randint, 10, 60)  # Tiempos iniciales de fase
@@ -27,11 +32,11 @@ def run_ga_optimization(pop_size, generations, net_file, route_file, scenario, r
     toolbox.register("mutate", tools.mutGaussian, mu=35, sigma=10, indpb=0.2)  # Mutación arbitraria
     toolbox.register("select", tools.selRoulette)  # Selección arbitraria
 
-    # NOTA: evaluate se registrará usando una lambda para pasar los archivos correctamente
+    # Registrar evaluate como wrapper que pasa sumo_binary (NUEVO)
     def _evaluate(ind):
-        # Convierte los genes a tipos simples (enteros)
         genome = [int(x) for x in ind]
-        return (evaluate_genome(genome, net_file, route_file, scenario, run_id),)
+        # IMPORTANT: evaluate_genome devuelve fitness (float); DEAP espera una tupla
+        return (evaluate_genome(genome, net_file, route_file, scenario, run_id, sumo_binary),)
 
     toolbox.register("evaluate", _evaluate)
 

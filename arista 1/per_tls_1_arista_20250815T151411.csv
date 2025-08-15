@@ -1,0 +1,2 @@
+scenario,run_id,tls,avg_queue_tls,avg_wait_tls,vehicle_count_tls,flow_tls
+1_arista,20250815T151411,clusterJ4_J6_J7,11.460006653676157,355.44230312247515,10800,0.2566417945915118
