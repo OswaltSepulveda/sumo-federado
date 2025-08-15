@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-08-15 08:09:11 by Eclipse SUMO sumo Version 1.24.0
+<!-- generated on 2025-08-15 17:41:52 by Eclipse SUMO sumo Version 1.19.0
 -->
 
-<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
         <net-file value="4_arista_simulation.net.xml"/>
         <route-files value="4_arista_simulation.rou.xml"/>
     </input>
 
-</sumoConfiguration>
+</configuration>
